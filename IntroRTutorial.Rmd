@@ -1210,9 +1210,9 @@ veg.all <- read.csv("veg-all.csv", header=TRUE)
 ```
 
 ### 
-You can view all the data using the `View` command:
+You can view all the data by typing `View(veg.all)`:
 ```{r echo=TRUE}
-View(veg.all)
+
 ```
 
 ###
