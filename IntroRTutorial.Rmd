@@ -513,11 +513,11 @@ Sorry, no hint this time.  Try out all the solutions and see which works.
 
 ###Solution
 
-* *Correct*: `quadrat[1]` You can index a column by its number, without specifying any rows.    
-* *Correct*: `quadrat[,1]` You access values by specifying rows and columns: `[row , column]`.  Here we left the row index blank, which returns all rows, and the first column.    
+* *Correct*: `quadrat[1]` You can index a column by its number, without specifying any rows.  It returns a *data frame*.   
+* *Correct*: `quadrat[,1]` You access values by specifying rows and columns: `[row , column]`.  Here we left the row index blank, which returns all rows, and the first column. It returns a *data frame*.    
 * *Incorrect*: `quadrat.plants` **R** thinks this is an object called   `quadrat.plants`: we haven't defined such an object.   
-* *Correct*: `quadrat$plants` The `$` character is used to reference a column name.
-* *Correct*: `quadrat["plants"]` Here we have used a character string to reference a column by its name.     
+* *Correct*: `quadrat$plants` The `$` character is used to reference a column name.  It returns a *vector*.
+* *Correct*: `quadrat["plants"]` Here we have used a character string to reference a column by its name.  It returns a *data frame*.     
 
 ###
 End of topic **Data Frame**
