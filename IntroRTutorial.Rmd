@@ -65,6 +65,23 @@ In **R**, any text to the right of a hash `#` is ignored by the **R** programme.
 #pssst: R is a silly name for a programme. Don't tell R.   
 ```
 
+##Writing R code
+
+Throughout this tutorial you will be given opportunities to write code.  The **R** language has a very simple syntax with a only a few rules.  You won't need to remember this for the tutorial, but here is a summary of the rules: 
+
+* **R** language is case sensitive: `banana` and `Banana` will be interpreted as different things. 
+
+* Spaces and indentation carry no meaning (unlike other languages).  However, they are recommended for ease of reading.  
+
+* All alphanumeric symbols are allowed.  
+
+* Names (e.g. of objects) have few rules.  A name must start with a letter or `.`, and if it starts with `.` the second character must not be a digit). Names are effectively unlimited in length.
+
+* Commands are separated by a new line, or a semi-colon (‘;’).  A single command can run over several lines.  Some commands can be chained together with special symbols (e.g. `+` or `%>%`) - not covered in this tutorial.  
+
+* Comments can be put almost anywhere, starting with a hash `#`, everything to the end of the line is a comment.
+
+
 Click **Next topic** to view the contents of this tutorial.  
 
 ##CONTENTS
