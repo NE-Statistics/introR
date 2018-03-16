@@ -402,7 +402,12 @@ quadrat
 ```
 
 ###
-The `data.frame` function combines the vectors into a data frame.  You could also use `cbind` and **R** would automatically create a `data.frame` because a matrix cannot contain vectors of different data types.
+The `data.frame` function combines the vectors into a data frame.  It also automatically assigns a class to each column.  In the example above it has assigned the character data to a factor class, and the numeric data to class double (in R this is equivalent to numeric).  
+
+Column *plants* is class **factor**  
+Column *cover* is class **double** or **numeric**  
+
+You could also use `cbind` and **R** would automatically create a `data.frame` because a matrix cannot contain vectors of different data types.
 
 ###Accessing data in data frames
 You are likely to want to retrieve all or parts of the data in a data frame.  There are a number of ways of doing this: 
