@@ -764,6 +764,8 @@ We'd like to convert the readings from cm to metres, so we need to divide each v
 water.table / 100
 ```
 
+By default, R operates on objects *element-wise*, i.e. on each element of the vector in turn.  It has multiplied each measurement by 100.  
+
 ###
 We repeat our measurements the following year:
 ```{r echo=TRUE}
@@ -776,6 +778,20 @@ Now we'd like to know the the difference in water table between one year and the
 ```{r echo=TRUE}
 water.table.rpt - water.table
 ```
+
+**R** has again operated element-wise, but in this case with two vectors.  It has subtracted each element in one vector from the corresponding vector in the other.  
+
+You can visualise it like this: 
+```{r}
+knitr::kable(
+cbind(element = seq(1:12), 
+      water.table.rpt,
+      operator = rep("-", 12), 
+      water.table, 
+      result = water.table.rpt - water.table)
+)
+```
+
 
 ###
 Or we can calculate the difference and convert to metres in one line of code: 
@@ -862,7 +878,7 @@ knitr::kable(burnmoss)
 
 ###
 You have saved the results into two vectors: 
-```{r echo = T}
+  ```{r echo = T}
 burn <- c(FALSE, TRUE, FALSE, FALSE, TRUE)
 moss <- c(TRUE, TRUE, FALSE, FALSE, TRUE)
 ```
