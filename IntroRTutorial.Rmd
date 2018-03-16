@@ -1299,10 +1299,15 @@ Generating random numbers can be useful in collecting and analyising ecological 
 You can generate random numbers in R in a variety of ways:
 
 ###
-`sample` draws random numbers from a sample.  Here we have drawn 10 numbers at random from a sample of whole numbers between  1 and 100, e.g. to select ten random survey points along  a 100m transect.
+`sample` draws random numbers from a sample.  Here we have drawn 10 unique numbers at random from a sample of whole numbers between  1 and 100, e.g. to select ten random survey points along  a 100m transect.
 ```{r echo=TRUE}
 sample(x = 1:100, size = 10, replace = F)
 ```
+
+`x = 1:100` specifies the population we are sampling from. 
+`size = 10` specifies the number of samples we wish to take. 
+`replace = F` specifies that once a number has been randomly selected, it cannot be chosen again (i.e. without replacement).
+
 
 ###
 **R** has a series of functions which generate random numbers drawn from a series of statistical distributions.  We will have a look at each function, plot it and consider where it might be relevant.  The functions in question are: 
