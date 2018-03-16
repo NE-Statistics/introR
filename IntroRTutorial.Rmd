@@ -599,12 +599,13 @@ Data in text files is often separated by commas, but you may find other separato
 veg.heights <- read.table("veg-heights.txt", sep="")
 ```
 
-### Installing Excel files
+### Importing Excel files
 
 By installing R extensions you can read data in other formats, such as Excel or spatial data from shapefiles. 
 
 The package [xlsx](https://cran.r-project.org/web/packages/xlsx/index.html) can be installed from the R repository and includes functions for importing Excel files in xlsx format.  
 
+###
 First you will need to install the xlsx package as it is not part of the base R libraries.
 
 `install.packages("xlsx")`
@@ -617,11 +618,16 @@ To use the package you must first load it from your library.
 
 Hint:  On a Natural England laptop you may need to run the 32 bit version of R for this to work.
 
+###
 To read an Excel file use the following command.
 
 `veg.heights <- read.xlsx("veg-heights.xlsx", 1)`
 
-The first first argument "`veg-heights.xlsx`" is the name of the Excel file and the second argument `1` is the index of the worksheet that you wish to import.
+The first argument `veg-heights.xlsx` is the name of the Excel file.  
+
+Excel workbooks can consist of many worksheets, so we need to specify which one we want to import.  The second argument `1` references the worksheet that you wish to import, counting from the left.  
+
+*Note*: `read.xlsx` does not support referencing worksheets by name.  
 
 ###
 End of topic **Importing other formats**
