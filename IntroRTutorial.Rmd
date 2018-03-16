@@ -298,7 +298,7 @@ You can **bind** these two **vectors** into a **matrix**:
 trap.count <- cbind(c(11,19,33,12), c(9,33,27,14))
 ```
 
-The `cbind` (**c**olumn **bind**) function combind the vectors into a matrix as columns.  You could also use `rbind` (**r**ow **bind**) to bind vectors as rows.  
+The `cbind` (**c**olumn **bind**) function combined the vectors into a matrix as columns.  You could also use `rbind` (**r**ow **bind**) to bind vectors as rows.  
 
 ###Matrix function
 You can also coerce a single vector into a matrix by using the **matrix** function.  For this you need to specify the vector, and either: 
