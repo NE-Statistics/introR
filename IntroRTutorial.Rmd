@@ -364,7 +364,7 @@ End of topic **Matrix**
 
 ###What is a data frame?
 
-A data frame consists of two or more **vectors** of the **same length**.  Unlike a matrix each column can contain **different types of data**.  It is the preferred way of storing tabular data in R.  It is also the default way data from Excel spreadsheets is imported into **R**.
+A data frame consists of two or more **vectors** of the **same length**.  Unlike a matrix each column can contain **different types of data**.  It is the preferred way of storing tabular data in R.  It is also the default way data from Excel spreadsheets is imported into **R**, and for this reason the most common way ecological data will be imported for analysis.
 
 ###Example: vegetation quadrat
 
