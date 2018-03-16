@@ -553,7 +553,7 @@ Data is often collated from sources such as:
 
 ###Example
 
-You want to understand the impact of grazing on a site, so you have measured the height of grasses, mosses and shrubs on five occasions in the last ten years.  
+You want to analyse some vegetation height data.  It is saved in the following file in your working directory: `veg-heights.csv`.  
 
 ###
 The easiest way of getting data into R is to read it from a text file,  for example a file saved as comma separated values in Excel (.csv). To make it easy for a beginner to deal with, the .csv file should have: 
@@ -565,26 +565,22 @@ The easiest way of getting data into R is to read it from a text file,  for exam
 
 ###The read.csv function
 
-The **read.csv()** function can bring csv file data into **R**.  The code needs to have the following components: 
-
-###
-`read.csv()`  The function which will interpret the file and read it into **R**
-
-###
-`"veg-heights.csv"`  The name of the file you are importing.  Note that it is in quotes `""`: this is because we want **R** to read it as a string of characters.  
-
-###
-`header = TRUE`  An **parameter** for the `read.csv()` function.  We will learn more about parameters later.  
-
-###
-`veg.heights`  A name for the **object** we will read the file into.  If the object already exists **R** will overwrite it.  If it doesn't exist, **R** will create it. 
-
-###
-Here is the assembled line of code: 
+The **read.csv()** function can bring csv file data into **R**.  
 
 ```{r, echo=TRUE, eval=FALSE}
 veg.heights <- read.csv("veg-heights.csv", header=TRUE)
 ```
+
+The code has the following components: 
+
+###
+`read.csv()`  The function which will interpret the file and read it into **R**
+
+`"veg-heights.csv"`  The name of the file you are importing.  Note that it is in quotes `""`: this is because we want **R** to read it as a string of characters.  
+
+`header = TRUE`  A **parameter** for the `read.csv()` function.  We will learn more about parameters later.  
+
+`veg.heights`  A name for the **object** we will read the file into.  If the object already exists **R** will overwrite it.  If it doesn't exist, **R** will create it. 
 
 ###
 End of topic **Importing csv files**
