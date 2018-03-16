@@ -284,7 +284,7 @@ A **matrix** consists of two or more *vectors* which must:
 * contain the same type of data.
 
 ###Example: pitfall traps
-You have four [pitfall traps](http://en.wikipedia.org/wiki/Pitfall_trap) and have counted how many invertebrates of two species are found in each. You found the following numbers of species in the traps:  
+You have four [pitfall traps](http://en.wikipedia.org/wiki/Pitfall_trap) and have counted how many invertebrates of two species are found in each. You found the following numbers of individuals of each species in the traps:  
 
 ```{r echo=TRUE}
 species.a <- c(11,19,33,12)
