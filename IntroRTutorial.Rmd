@@ -325,13 +325,13 @@ temp <- c(1.27, 3.68,  6.43,  9.32, 11.06, 16.14, 18.38, 16.16, 14.03, 10.85, 5.
 You want to put these into a matrix where each row represents a month and each column a year.  You know they are in order, starting with January of the first year.  
 
 ###
-You can do this by specifying the number of rows (12 months = 12 columns).  Click **Run Code** to see how it works: 
+You can do this by specifying the number of rows (12 months = 12 rows).  Click **Run Code** to see how it works: 
 
 ```{r weather.records,  exercise=TRUE, exercise.eval=FALSE}
 matrix(temp, nrow= 12)
 ```
 
-This creates a matrix with one row for each month and one column for each year.
+This creates a matrix with one row for each month and one column for each year.  Note that `R` has automatically worked out that there must be 5 columns.  
 
 ###Exercise: another pitfall trap
 
