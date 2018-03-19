@@ -1378,13 +1378,14 @@ hist(rexp(n = 10000))
 ```
 
 
-## GRAPHS
+## Tutorial 5: GRAPHS
 **R** produces great plots, but unlike other software you need to tell **R** in writing how the plot should look.
 
 ###
 Lets look at the vegetation heights data again.  
 ```{r veggraph-setup}
 veg.all <- read.csv("veg-all.csv", header=TRUE)
+head(veg.all)
 ```
 
 So now we can start plotting the data with a function called ... `plot`.  
@@ -1402,7 +1403,14 @@ plot(formula = height ~ cover, data = veg.all)
 ```
 
 ###
-Do you think there is a relationship between vegetation height and cover here? 
+Do you think there is a relationship between vegetation height and cover here? We can add a simple regression line by combining the functions `lm` (to fit a linear model), and `abline` (literally a *line* from *a* to *b*). 
+
+```{r echo=TRUE}
+plot(formula = height ~ cover, data = veg.all)
+abline(lm(formula = height ~ cover, data = veg.all), col = "red")
+```
+
+Note the *graphical parameter* `col` which changes the colour of the line to red. More on graphical parameters below.  
 
 ###
 Now lets look at `height` and `year`.  Perhaps there is change over time? 
@@ -1413,12 +1421,13 @@ plot(height ~ year, veg.all)
 Note that we have left out the names of the plot arguments `formula =` and `data =`.  This is common, and as long as **R** can interpret it correctly, makes writing code more efficient. 
 
 ###
-You see that the data is stacked in each year, which sugegsts that `year` is actually a categorical variable.  This means we can use boxplots. 
+You see that the data is stacked in each year, which suggests that `year` is actually a categorical variable.  This means we can use boxplots. 
 
 ###
 The `boxplot` function can give us an idea of how the data is distributed: 
 ```{r echo = TRUE}
 boxplot(height ~ year, veg.all)
+
 ```
 
 ###
@@ -1429,6 +1438,28 @@ boxplot(formula = height ~ year, data = veg.all,
         xlab = "survey years",
         ylab = "vegetation height")
 ```
+
+###
+Count data is best presented as a bar plot.  Have a look at our birds example from earlier: 
+```{r birdgraph-setup}
+birds <- data.frame(species = c("duck", "gull", "lapwing", "nuthatch", "owl", "robin", "sparrow", "tit" ), 
+               farm = c(10,5,2,0,0,0,7,2),
+               garden = c(7,0,0,0,0,3,0,6), 
+               wood = c(0,0,0,4,2,0,0,8)
+               )
+birds
+```
+
+
+```{r echo=TRUE}
+counts <- birds$farm
+names(counts) <- birds$species
+
+barplot(counts, 
+        main="Taxon Distribution", 
+        xlab="Taxon")
+```
+
 
 ###
 End of section **GRAPHS**
