@@ -1390,7 +1390,7 @@ head(veg.all)
 
 So now we can start plotting the data with a function called ... `plot`.  
 
-###
+### The plot function
 When using the `plot` function R automatically selects an appropriate graph type, depending on the data.  Here it has chosen to plot all variables against each other. It can provide a quick way of choosing what to plot next.  
 ```{r echo=TRUE}
 plot(veg.all)
@@ -1423,11 +1423,10 @@ Note that we have left out the names of the plot arguments `formula =` and `data
 ###
 You see that the data is stacked in each year, which suggests that `year` is actually a categorical variable.  This means we can use boxplots. 
 
-###
+### The boxplot function
 The `boxplot` function can give us an idea of how the data is distributed: 
 ```{r echo = TRUE}
 boxplot(height ~ year, veg.all)
-
 ```
 
 ###
@@ -1439,27 +1438,101 @@ boxplot(formula = height ~ year, data = veg.all,
         ylab = "vegetation height")
 ```
 
+###  The barplot function
+Count data is best presented as a bar plot.  Have a look at our deer count example from earlier.  The data is now in a  matrix showing the average number of deer counted in each year.  
+
+```{r deerbar-setup, echo=F}
+deer1 <- data.frame(red = c(5, 17, 28), roe = c(33, 35, 75))
+deer2 <- data.frame(red = c(7, 15, 50), roe = c(20, 22, 61))
+
+deer <- matrix(c(mean(deer1$red), mean(deer1$roe), mean(deer2$red), mean(deer2$roe)), 
+               ncol = 2)
+row.names(deer) = c("red", "roe")
+colnames(deer) <- c("year1", "year2")
+deer
+```
+
+The following command prints a simple bar plot:
+```{r deerbar, echo=T}
+barplot(deer)  
+```
+
+### Introduction to graphical parameters
+At the moment, this chart lacks a legend.  We can use *parameters* to improve charts. Key parameters for bar plots are:  
+
+* `legend` (adds a legend using row names)
+* `beside` (unstacks bar plots) 
+* `horiz` (flips bar plots by 90 degrees)
+* `col` (adds colour)
+
 ###
-Count data is best presented as a bar plot.  Have a look at our birds example from earlier: 
-```{r birdgraph-setup}
-birds <- data.frame(species = c("duck", "gull", "lapwing", "nuthatch", "owl", "robin", "sparrow", "tit" ), 
-               farm = c(10,5,2,0,0,0,7,2),
-               garden = c(7,0,0,0,0,3,0,6), 
-               wood = c(0,0,0,4,2,0,0,8)
-               )
-birds
+You can see how they are used in this example: 
+
+```{r deerbar2-setup, echo=F}
+deer1 <- data.frame(red = c(5, 17, 28), roe = c(33, 35, 75))
+deer2 <- data.frame(red = c(7, 15, 50), roe = c(20, 22, 61))
+
+deer <- matrix(c(mean(deer1$red), mean(deer1$roe), mean(deer2$red), mean(deer2$roe)), 
+               ncol = 2)
+row.names(deer) = c("red", "roe")
+colnames(deer) <- c("year1", "year2")
+deer
 ```
 
-
-```{r echo=TRUE}
-counts <- birds$farm
-names(counts) <- birds$species
-
-barplot(counts, 
-        main="Taxon Distribution", 
-        xlab="Taxon")
+```{r deerbar2, echo=T}
+barplot(deer, 
+        legend = TRUE, 
+        horiz = TRUE, 
+        beside = TRUE, 
+        col = c("red", "blue"))
 ```
 
+### Excercise: plot parameters
+Try changing the following code to:
+
+1. make the bar plot vertical and
+2. change the blue bars to yellow.  
+
+```{r deerex-setup}
+deer1 <- data.frame(red = c(5, 17, 28), roe = c(33, 35, 75))
+deer2 <- data.frame(red = c(7, 15, 50), roe = c(20, 22, 61))
+
+deer <- matrix(c(mean(deer1$red), mean(deer1$roe), mean(deer2$red), mean(deer2$roe)), 
+               ncol = 2)
+row.names(deer) = c("red", "roe")
+colnames(deer) <- c("year1", "year2")
+```
+
+```{r deerex, exercise=TRUE, exercise.lines = 7}
+barplot(deer, 
+        legend = TRUE, 
+        horiz = TRUE, 
+        beside = TRUE, 
+        col = c("red", "blue"))
+```
+
+```{r deerex-solution}
+barplot(deer, 
+        legend = TRUE, 
+        horiz = FALSE, 
+        beside = TRUE, 
+        col = c("red", "yellow"))
+``` 
+
+
+### 
+There are a huge number of graphical parameters.  They can be added to any of the above plotting functions (`plot`, `boxplot`, `barplot`) and many others.  A useful introduction to common parameters can be found here: https://www.statmethods.net/advgraphs/parameters.html.  
+
+To see a full list of parameters, see the helpfile `par` by running the code below: 
+
+```{r parhelp, exercise=TRUE}
+?par
+```
+
+Parameters can also be set for all plots.  This uses the `par` function which must be run **before** the plot is generated.  These parameters will then be used for all subsequent plots for the duration of the R session, or until they are changed.  
 
 ###
 End of section **GRAPHS**
+
+###
+End of tutorial
