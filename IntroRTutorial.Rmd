@@ -1255,7 +1255,7 @@ You can view all the data by typing `View(veg.all)`:
 
 ```
 
-###
+### Summary statistics
 Using the function `summary` you can get an idea of which variables are in the data. 
 ```{r echo=TRUE}
 summary(veg.all)
@@ -1279,7 +1279,7 @@ boxplot(height ~ factor(year), data=veg.grasses)
 
 The [Graphs](#section-graphs) section provides more information on producing plots in **R**. In the code above `year` has been converted to a factor so that **R** knows that it should be interpreted as categorical data rather than as continuous values.
 
-###
+### Testing for difference
 
 Visually there appears to be a difference in the vegetation heights of grasses between some of the years.
 
