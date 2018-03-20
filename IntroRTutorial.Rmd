@@ -14,6 +14,18 @@ knitr::opts_chunk$set(echo = FALSE)
 tutorial_options(exercise.cap = "Code", exercise.eval = FALSE, exercise.timelimit = NULL, exercise.lines = 3, exercise.checker = FALSE, exercise.completion = TRUE, exercise.diagnostics = TRUE, exercise.startover = TRUE)  
 ```
 
+## BEFORE YOU BEGIN
+Use the **Chrome** browser for this tutorial.  If you are not in Chrome, copy the link and open it in Chrome.  If your screen is **grey** do the following: 
+
+* press the following keys, holding them all down (you'll need to use four fingers for this!): **ctr + shift + alt + A**
+![ctrshiftaltA](images/IntroR_ctraltshiftA.png){width="60"} 
+
+* **deselect** all but the last Network Method and **click OK**
+![Select network method](images/IntroR_selnetmeth.png){width="60"} 
+
+* refresh your browser by pressing **F5**
+
+
 ## INTRODUCTION  
 ### About this tutorial  
 
@@ -28,7 +40,7 @@ This Introduction to R e-learning tutorial is a part of Natural England's traini
 
 This will give you the grounding to follow the statistical case study examples that are being developed and to apply the techniques to your own data.
 
-(Last updated: 30 October 2017)
+(Last updated: 20 March 2018)
 
 ###Target audience
 The course is suitable for anyone who wants to be able to undertake statistical analysis themselves.
