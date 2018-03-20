@@ -652,7 +652,7 @@ End of topic **Importing other formats**
 ## Viewing data in R Studio
 Once you have read in a file, in R Studio it will appear in the Global Environment window in the top right hand side.  
 
-![RStudio's view of data that has been imported](images/introR_data_import.png){width="560"}
+![RStudio's view of data that has been imported](images/IntroR_data_import.png){width="560"}
 
 Clicking on the table icon to the right of the variable name will open a window showing its values.
 
@@ -680,7 +680,7 @@ We have already encountered some R functions, such as `c`, `factor`, `cbind`, `d
 Let's look at the components of a function we've already used: 
 
 ###
-![The components of a function](images/introR_functions.png){width="560"}
+![The components of a function](images/IntroR_functions.png){width="560"}
 
 ###
 End of topic **How do functions work**
@@ -915,15 +915,15 @@ quiz(
 
 ###Solution
 
-![OR](images/introR_OR.png){height="80"}
+![OR](images/IntroR_OR.png){height="80"}
 
 *Incorrect* `burn | moss` burn **OR** moss returns `TRUE` for each plot that has been burned, or there is moss, or both. It returns all plots. 
 
-![AND](images/introR_AND.png){height="80"} 
+![AND](images/IntroR_AND.png){height="80"} 
 
 *Correct* `burn & moss` burn ** AND** moss returns` TRUE` only if a plot has been burned and there is moss
 
-![NOT](images/introR_NOT.png){height="80"} 
+![NOT](images/IntroR_NOT.png){height="80"} 
 
 *Incorrect* `burn & !moss` burn **NOT** moss returns `TRUE` only if a plot has been burned but there is no moss.
 
