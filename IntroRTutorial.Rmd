@@ -19,12 +19,18 @@ Use the **Chrome** browser for this tutorial.  If you are not in Chrome, copy th
 
 * press the following keys, holding them all down (you'll need to use four fingers for this!):  
 **ctr + shift + alt + A**
-
 * **deselect** all but the last Network Method and **click OK**  
-
 * refresh your browser by pressing **F5**
 
 ![ctrshiftaltA](images/IntroR_ctraltshiftA.png){width="180"}   |  ![Select network method](images/IntroR_selnetmeth.png){width="300"} 
+
+If you don't have Chrome, the tutorial will work in Internet Explorer but the **Next Topic** button does not work.  There is a workaround:  
+
+* Click on **Next Topic**
+* Press **F5** to refresh your browser.  
+
+You will have to do this each time you reach the end of a topic.  
+
 
 ## INTRODUCTION  
 ### About this tutorial  
