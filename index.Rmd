@@ -17,14 +17,14 @@ tutorial_options(exercise.cap = "Code", exercise.eval = FALSE, exercise.timelimi
 ## BEFORE YOU BEGIN
 Use the **Chrome** browser for this tutorial.  If you are not in Chrome, copy the link and open it in Chrome.  If your screen is **grey** do the following: 
 
-* press the following keys, holding them all down (you'll need to use four fingers for this!): **ctr + shift + alt + A**
-![ctrshiftaltA](images/IntroR_ctraltshiftA.png){width="60"} 
+* press the following keys, holding them all down (you'll need to use four fingers for this!):  
+**ctr + shift + alt + A**
 
-* **deselect** all but the last Network Method and **click OK**
-![Select network method](images/IntroR_selnetmeth.png){width="60"} 
+* **deselect** all but the last Network Method and **click OK**  
 
 * refresh your browser by pressing **F5**
 
+![ctrshiftaltA](images/IntroR_ctraltshiftA.png){width="180"}   |  ![Select network method](images/IntroR_selnetmeth.png){width="300"} 
 
 ## INTRODUCTION  
 ### About this tutorial  
