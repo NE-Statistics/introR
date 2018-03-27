@@ -104,17 +104,18 @@ Click **Next topic** to view the contents of this tutorial.
 
 ##CONTENTS
 
-* Section 1: [R data types](#section-section-1-r-data-types) (xx minutes)
-* Section 2: [Importing data](#section-tutorial-2-importing-data) (xx minutes)
-* Section 3: [Functions and operators](#section-tutorial-3-functions-and-operators) (xx minutes)
-* Section 4: [Summary statistics](#section-tutorial-4-summary-statistics) (xx minutes)
-* Section 5: [Plots and charts](#section-graphs) (xx minutes) 
+* Tutorial 1: [R data types](#section-tutorial-1-r-data-types) (10 minutes)
+* Tutorial 2: [Importing data](#section-tutorial-2-importing-data) (5 minutes)
+* Tutorial 3: [Functions and operators](#section-tutorial-3-functions-and-operators) (20 minutes)
+* Tutorial 4: [Summary statistics](#section-tutorial-4-statistics) (15 minutes)
+* Tutorial 5: [Random distributions](#section-tutorial-5-random-distributions) (5 minutes)
+* Tutorial 6: [Graphs](#section-tutorial-6-graphs) (10 minutes) 
 
 Click **Next topic** to read on.  
 
-## SECTION 1: R DATA TYPES
+## TUTORIAL 1: R DATA TYPES
 
-This session should take about **xx** minutes to complete.  It introduces the ways in which R handles data, namely: 
+This session should take about **10** minutes to complete.  It introduces the ways in which R handles data, namely: 
 
 * Basic types (numeric, character and logical)
 * Data structures (vectors, matrices and data frames)
@@ -559,7 +560,7 @@ End of topic **Data Frame**
 
 ## TUTORIAL 2: IMPORTING DATA  
 
-This session should take about **xx** minutes to complete.  It gives a brief introduction to importing data from a text file.   
+This session should take about **5** minutes to complete.  It gives a brief introduction to importing data from a text file.   
 
 ## The working directory
 
@@ -680,7 +681,7 @@ end of topic **Importing data**
 
 ## TUTORIAL 3: FUNCTIONS AND OPERATORS  
 
-This session should take about **xx** minutes to complete.  It explains:
+This session should take about **20** minutes to complete.  It explains:
 
 * how functions work
 * how to find help
@@ -1075,7 +1076,7 @@ End of topic **Functions and operators**
 
 ## TUTORIAL 4: STATISTICS  
 
-This session should take about **xx** minutes to complete.  It gives a very brief introduction to calculating statistics from **R**
+This session should take about **15** minutes to complete.  It gives a very brief introduction to calculating statistics from **R**
 
 ## Summary statistics
 
@@ -1322,9 +1323,9 @@ The case study on comparing means **[link]** goes through this example in more d
 ###
 end of topic **Statistics**
 
-##RANDOM DISTRIBUTIONS
+## TUTORIAL 5: RANDOM DISTRIBUTIONS
 
-This session should take about **xx** minutes to complete.  It will introduce a number of statistical distributions, the generations of random numbers and how to prepare simple plots and charts in **R**
+This session should take about **5** minutes to complete.  It will introduce a number of statistical distributions, the generations of random numbers and how to prepare simple plots and charts in **R**
 
 ##Generating random numbers
 
@@ -1396,7 +1397,7 @@ hist(rexp(n = 10000))
 ```
 
 
-## Tutorial 5: GRAPHS
+## TUTORIAL 6: GRAPHS
 **R** produces great plots, but unlike other software you need to tell **R** in writing how the plot should look.
 
 ###
@@ -1553,4 +1554,4 @@ Parameters can also be set for all plots.  This uses the `par` function which mu
 End of section **GRAPHS**
 
 ###
-End of tutorial
+This is the end of the **Introduction to R Tutorial**.  
